@@ -1,5 +1,7 @@
 # flask-crud
-Basick python flask crud application with mysql
+Basic python flask crud application with mysql
+
+Import mysql from `mysql/testapp.sql`
 
 
 ## Homepage
