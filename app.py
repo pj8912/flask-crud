@@ -17,6 +17,20 @@ cnx = mysql.connector.connect(user=USERNAME, password=PWD, host=HOST, database=D
 cursor = cnx.cursor()
 
 
+
+@app.route("/product/create")
+def create():
+    return render_template('create.html')
+
+
+@app.route("/product/createnew", methods=['POST'])
+def create_new():
+    title = request.form['title']
+    short_notes = request.form['shortnotes']
+    price = request.form['price']
+    cursor.execute("INSERT INTO products(title,short_notes,price) VALUES(%s, %s, %s)", (title, short_notes, price))
+    return redirect("/")
+
 @app.route("/product/edit/<int:id>")
 def edit(id):
     #select based on id

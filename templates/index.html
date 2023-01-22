@@ -6,7 +6,7 @@
 	
 	<body>
 
-		<h1 align="center">FLASK CRUD</h1>
+		<h1 align="center">FLASK CRUD</h1> [<a href="/product/create">Create New Product</a>]
 		<ul align="center" style="list-style:none">
 			{% for row in rows %}
 			<li>{{ row[1]  }} | {{ row[2]  }} | {{ row[3] }} [<a href="/product/edit/{{ row[0] }}">edit</a> | <a href="/product/delete/{{ row[0] }}">delete</a> ]</li><br>
